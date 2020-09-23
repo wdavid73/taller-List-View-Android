@@ -55,7 +55,6 @@
     <string name="validate_high">Porfavor Ingrese el Valor de la Altura</string>
 
 
-
     <string-array name="options">
         <item>@string/areas</item>
         <item>@string/volumes</item>

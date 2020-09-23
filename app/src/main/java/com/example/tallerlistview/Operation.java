@@ -35,7 +35,7 @@ public class Operation {
         this.result = result;
     }
 
-    public void save(){
+    public void save() {
         Datos.save(this);
     }
 }

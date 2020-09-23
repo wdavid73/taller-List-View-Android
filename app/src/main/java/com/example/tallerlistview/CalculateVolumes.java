@@ -1,13 +1,13 @@
 package com.example.tallerlistview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tallerlistview.Volumes.Cone;
 import com.example.tallerlistview.Volumes.Cube;
@@ -27,13 +27,13 @@ public class CalculateVolumes extends AppCompatActivity {
 
         listOptionsVolumes = findViewById(R.id.lstOptionsVolumes);
         options = getResources().getStringArray(R.array.optionsVolumes);
-        adapter = new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,options);
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, options);
         listOptionsVolumes.setAdapter(adapter);
 
         listOptionsVolumes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                switch (i){
+                switch (i) {
                     case 0:
                         intent = new Intent(CalculateVolumes.this, Cylinder.class);
                         startActivity(intent);
