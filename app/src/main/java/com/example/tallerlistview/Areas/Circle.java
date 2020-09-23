@@ -11,9 +11,7 @@ import android.widget.Toast;
 import com.example.tallerlistview.Operation;
 import com.example.tallerlistview.R;
 
-import org.w3c.dom.Text;
-
-public class CalculateAreaCircle extends AppCompatActivity {
+public class Circle extends AppCompatActivity {
 private TextView result;
 private EditText radius;
     @Override
@@ -28,16 +26,16 @@ private EditText radius;
 
     public void calculate(View v){
         Operation operation;
-        double res , value_radius;
+        int res , value_radius;
         result.setText("");
         if(validate()){
-            value_radius = Double.parseDouble(String.valueOf(radius.getText()));
+            value_radius = Integer.parseInt(String.valueOf(radius.getText()));
 
-            res = Math.pow(value_radius,2)*Math.PI;
-            result.setText(getString(R.string.areaCircle) + res);
+            res = (int)Math.pow(value_radius,2)*(int)Math.PI;
+            result.setText(getString(R.string.area_circle) + res);
             operation = new Operation(
-                    ""+getString(R.string.areaTriangleResult),
-                    ""+ getString(R.string.circle_radius) +value_radius,
+                    ""+getString(R.string.area_circle_result),
+                    ""+ getString(R.string.circle_radius) +" "+value_radius,
                     ""+res
             );
             operation.save();

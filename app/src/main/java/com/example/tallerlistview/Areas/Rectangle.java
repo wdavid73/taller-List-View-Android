@@ -11,46 +11,54 @@ import android.widget.Toast;
 import com.example.tallerlistview.Operation;
 import com.example.tallerlistview.R;
 
-public class CalculateAreaSquare extends AppCompatActivity {
-    private EditText side;
+public class Rectangle extends AppCompatActivity {
+    private EditText side , base;
     private TextView result;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculate_area_square);
+        setContentView(R.layout.activity_calculate_area_rectangle);
 
-        side = findViewById(R.id.txtSideValue);
+        side = findViewById(R.id.txtSide);
+        base = findViewById(R.id.txtBase);
         result = findViewById(R.id.lblResult);
     }
 
-    public void save(View v){
+    public void calculate(View v){
         Operation operation;
-        double res ;
-        int value_side;
+        double res;
+        int value_side , value_base;
         result.setText("");
         if(validate()){
             value_side = Integer.parseInt(String.valueOf(side.getText()));
+            value_base = Integer.parseInt(String.valueOf(base.getText()));
 
-            res = value_side * value_side;
-            result.setText(getString(R.string.areaSquare) + res);
+            res = value_side * value_base;
+            result.setText(getString(R.string.area_rectangle) + res);
             operation = new Operation(
-                    ""+getString(R.string.areaSquareResult),
-                    ""+value_side,
+                    ""+getString(R.string.area_rectangle_result),
+                    ""+ getString(R.string.value_side)+ " " + value_side + " " + getString(R.string.value_base)+ " " + value_base,
                     ""+res
             );
             operation.save();
             Toast.makeText(this, R.string.operation_success,Toast.LENGTH_LONG).show();
         }
-    }
 
-    public void clear(View v){
-        side.setText("");
-        result.setText("");
-        side.requestFocus();
     }
 
     public boolean validate(){
+        if(base.getText().toString().isEmpty()){
+            base.setError(getString(R.string.validate_base));
+            base.requestFocus();
+            return false;
+        }
+
+        if(Integer.parseInt(base.getText().toString()) == 0){
+            base.setError(getString(R.string.validate_base));
+            base.requestFocus();
+            return false;
+        }
+
         if(side.getText().toString().isEmpty()){
             side.setError(getString(R.string.validate_side));
             side.requestFocus();
@@ -62,6 +70,7 @@ public class CalculateAreaSquare extends AppCompatActivity {
             side.requestFocus();
             return false;
         }
+
         return true;
     }
 }

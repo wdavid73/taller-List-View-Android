@@ -11,19 +11,18 @@ import android.widget.Toast;
 import com.example.tallerlistview.Operation;
 import com.example.tallerlistview.R;
 
-public class CalculateAreaRectangle extends AppCompatActivity {
+public class Triangle extends AppCompatActivity {
     private EditText side , base;
     private TextView result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculate_area_rectangle);
+        setContentView(R.layout.activity_calculate_area_triangle);
 
         side = findViewById(R.id.txtSide);
         base = findViewById(R.id.txtBase);
         result = findViewById(R.id.lblResult);
     }
-
     public void calculate(View v){
         Operation operation;
         double res;
@@ -33,11 +32,11 @@ public class CalculateAreaRectangle extends AppCompatActivity {
             value_side = Integer.parseInt(String.valueOf(side.getText()));
             value_base = Integer.parseInt(String.valueOf(base.getText()));
 
-            res = value_side * value_base;
-            result.setText(getString(R.string.areaRectangle) + res);
+            res = (value_side * value_base)/2;
+            result.setText(getString(R.string.area_triangle) + res);
             operation = new Operation(
-                    ""+getString(R.string.areaRectangleResult),
-                    ""+ getString(R.string.value_side) + value_side + " " + getString(R.string.value_base) + value_base,
+                    ""+getString(R.string.area_triangle_result),
+                    ""+ getString(R.string.value_side)+ " " + value_side + " " + getString(R.string.value_base)+ " " + value_base,
                     ""+res
             );
             operation.save();

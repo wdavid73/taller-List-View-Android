@@ -9,10 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.tallerlistview.Areas.CalculateAreaCircle;
-import com.example.tallerlistview.Areas.CalculateAreaRectangle;
-import com.example.tallerlistview.Areas.CalculateAreaSquare;
-import com.example.tallerlistview.Areas.CalculateAreaTriangle;
+import com.example.tallerlistview.Areas.Circle;
+import com.example.tallerlistview.Areas.Rectangle;
+import com.example.tallerlistview.Areas.Square;
+import com.example.tallerlistview.Areas.Triangle;
 
 public class CalculateAreas extends AppCompatActivity {
     private ListView listOptionsAreas;
@@ -34,19 +34,19 @@ public class CalculateAreas extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 switch (i){
                     case 0:
-                        intent = new Intent(CalculateAreas.this, CalculateAreaSquare.class);
+                        intent = new Intent(CalculateAreas.this, Square.class);
                         startActivity(intent);
                         break;
                     case 1:
-                        intent = new Intent(CalculateAreas.this, CalculateAreaRectangle.class);
+                        intent = new Intent(CalculateAreas.this, Rectangle.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(CalculateAreas.this, CalculateAreaTriangle.class);
+                        intent = new Intent(CalculateAreas.this, Triangle.class);
                         startActivity(intent);
                         break;
                     case 3:
-                        intent = new Intent(CalculateAreas.this, CalculateAreaCircle.class);
+                        intent = new Intent(CalculateAreas.this, Circle.class);
                         startActivity(intent);
                         break;
                 }

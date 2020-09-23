@@ -1,36 +1,59 @@
 <resources>
-    <string name="app_name">TallerListView</string>
+    <string name="app_name">Taller List View</string>
+
     <string name="title">Taller List View</string>
-    <string name="options">Opciones</string>
     <string name="areas">Areas</string>
     <string name="volumes">Volumenes</string>
-    <string name="calculate">Calculate</string>
+    <string name="options">Opciones</string>
+    <string name="operation_list_title">Lista de Operaciones</string>
+
+    <string name="calculate">Calcular</string>
     <string name="calculate_area_square">Calcular Area del Cuadrado</string>
     <string name="calculate_area_rectangle">Calcular Area del Rectangulo</string>
     <string name="calculate_area_triangle">Calcular Area del Triangulo</string>
     <string name="calculate_area_circle">Calcular Area del Circulo</string>
-    <string name="description_image_formula_square">Image Formula Area Square</string>
-    <string name="areaSquare">Area del Cuadrado :</string>
-    <string name="areaSquareResult">Area del Cuadrado</string>
-    <string name="areaRectangle">Area del Rectangulo :</string>
-    <string name="areaRectangleResult">Area del Rectangulo</string>
+    <string name="calculate_volume_cone">Calcular Volumen del Cono</string>
+    <string name="calculate_volume_sphere">Calcular Volumen de la Esfera</string>
+    <string name="calculate_volume_cylinder">Calcular Volumen del Cilindro</string>
+    <string name="calculate_volume_cube">Calcular Volumen del Cubo</string>
+
+    <string name="description_image_formula_square">Imagen formula area del cuadrado</string>
+    <string name="area_square">Area del Cuadrado :</string>
+    <string name="area_square_result">Area del Cuadrado</string>
+    <string name="area_rectangle">Area del Rectangulo :</string>
+    <string name="area_rectangle_result">Area del Rectangulo</string>
+    <string name="area_triangle">Area del Triangulo : </string>
+    <string name="area_triangle_result">Area del Triangulo</string>
+    <string name="area_circle">Area del Circulo : </string>
+    <string name="area_circle_result">Area del Circulo</string>
+    <string name="volume_sphere">Volumen de la Esfera : </string>
+    <string name="volume_sphere_result">Volumen de la Esfera</string>
+    <string name="volume_cube">Volumen del Cubo : </string>
+    <string name="volume_cube_result">Volumen del Cubo</string>
+    <string name="volume_cylinder">Volumen del Cilindro :</string>
+    <string name="volume_cylinder_result">Volumen del Cilindro</string>
+    <string name="volume_cone">Volumen del Cono :</string>
+    <string name="volume_cone_result">Volumen del Cono</string>
+
+    <string name="field_id">ID</string>
+    <string name="field_operation">Operacion</string>
+    <string name="field_data">Datos</string>
+    <string name="field_result">Resultado</string>
+
+    <string name="value_side">Lado </string>
+    <string name="value_base">Base </string>
+    <string name="value_radius">Radio </string>
+    <string name="value_high">Altura</string>
+    <string name="circle_radius">Radio del Circulo</string>
+
     <string name="operation_success">Operacion Realizada Exitosamente</string>
     <string name="operations_performed">Operaciones Realizadas</string>
-    <string name="field_id">ID</string>
-    <string name="field_operation">Operation</string>
-    <string name="field_data">Data</string>
-    <string name="field_result">Result</string>
+
     <string name="validate_side">Porfavor Ingrese el Valor del un lado</string>
     <string name="validate_base">Porfavor Ingrese el Valor de la Base</string>
     <string name="validate_radius">Porfavor Ingrese el Valor del Radio</string>
-    <string name="value_side">Lado </string>
-    <string name="value_base">Base </string>
-    <string name="areaTriangleResult">Area del Triangulo</string>
-    <string name="areaTriangle">Area del Triangulo : </string>
-    <string name="circle_radius">Radio del Circulo</string>
-    <string name="areaCircleResult">Area del Circulo</string>
-    <string name="areaCircle">Area del Circulo : </string>
-    <string name="value_high">Altura</string>
+    <string name="validate_high">Porfavor Ingrese el Valor de la Altura</string>
+
 
 
     <string-array name="options">
@@ -44,6 +67,13 @@
         <item>@string/calculate_area_rectangle</item>
         <item>@string/calculate_area_triangle</item>
         <item>@string/calculate_area_circle</item>
+    </string-array>
+
+    <string-array name="optionsVolumes">
+        <item>@string/calculate_volume_cylinder</item>
+        <item>@string/calculate_volume_cone</item>
+        <item>@string/calculate_volume_sphere</item>
+        <item>@string/calculate_volume_cube</item>
     </string-array>
 
 

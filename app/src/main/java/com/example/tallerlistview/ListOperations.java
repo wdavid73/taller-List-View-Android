@@ -3,6 +3,7 @@ package com.example.tallerlistview;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Gravity;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -31,11 +32,16 @@ public class ListOperations extends AppCompatActivity {
             columnOperation.setText(operations.get(i).getOperation());
             columnData.setText(operations.get(i).getData());
             columnResult.setText(operations.get(i).getResult());
+            columnId.setGravity(Gravity.CENTER);
+            columnOperation.setGravity(Gravity.CENTER);
+            columnData.setGravity(Gravity.CENTER);
+            columnResult.setGravity(Gravity.CENTER);
 
             row.addView(columnId);
             row.addView(columnOperation);
             row.addView(columnData);
             row.addView(columnResult);
+            row.setPadding(0,0,0,2);
 
             table.addView(row);
 
